@@ -2,11 +2,11 @@
 import { useState } from "react";
 
  
-export function Counter({initial,addcls,remcls,totalcls,itemName,settotal}) {
+export function Invent({initial,addcls,remcls,totalcls,itemName,settotal}) {
 
 let [item,setItem]  = useState(initial)
 
-function handleChange(value) {
+function Changed(value) {
     setItem((pre)=>{
         if(pre===0 && value===-1) {
             return 0
@@ -21,10 +21,10 @@ function handleChange(value) {
  return (  <div className="items">
         <span >{itemName}</span>
         <button onClick={()=>{
-            handleChange(+1)
+            Changed(+1)
         }} className={addcls}>+</button>
         <button onClick={()=>{
-            handleChange(-1)
+            Changed(-1)
         }} className={remcls}>-</button>
         <span className={totalcls}>{item}</span>
         </div>
