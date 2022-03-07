@@ -13,9 +13,12 @@ function Changed(value) {
         if(pre=== 0 && value === -1) {
 
             return 0
+
         } settotal((pre)=>{
+
             return pre + value
         })
+        
         return pre + value
     })
 }
