@@ -2,31 +2,44 @@
 import { useState } from "react";
 
  
-export function Invent({initial,addcls,remcls,totalcls,itemName,settotal}) {
+export function Invent({start,ClassADD,ClassRemove,ClassTotal,itemName,settotal}) {
 
-let [item,setItem]  = useState(initial)
+let [item,setItem]  = useState(start)
 
-function Changed(value) {
+function Changed(value) { 
+
     setItem((pre)=>{
-        if(pre===0 && value===-1) {
+
+        if(pre=== 0 && value === -1) {
+
             return 0
-        }
-        settotal((pre)=>{
-            return pre+value
+        } settotal((pre)=>{
+            return pre + value
         })
         return pre + value
     })
 }
 
- return (  <div className="items">
-        <span >{itemName}</span>
+ return (  <div div className = "items">
+
+
+
+
+        <span > {itemName} </span>
+
+
+
         <button onClick={()=>{
+
             Changed(+1)
-        }} className={addcls}>+</button>
+
+        }} 
+        className={ClassADD}>+</button>
         <button onClick={()=>{
             Changed(-1)
-        }} className={remcls}>-</button>
-        <span className={totalcls}>{item}</span>
+        }} className={ClassRemove}> - </button>
+        
+        <span className={ClassTotal}>{item}</span>
         </div>
   )
 }

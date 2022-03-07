@@ -8,10 +8,10 @@ function App() {
 
   return (
     <div className="App">
-     <Invent initial={13} itemName={"Books:"} addcls={"addBook"} remcls={"remBook"} totalcls={"totalBooks"} settotal={setTotal} />
-     <Invent initial={10} itemName={"Pens:"} addcls={"addPen"} remcls={"remPen"} totalcls={"totalPens"} settotal={setTotal} />
-     <Invent initial={44} itemName={"Notebooks:"} addcls={"addNotebook"} remcls={"remNotebook"} totalcls={"totalNotebooks"} settotal={setTotal} />
-     <Invent initial={78} itemName={"Inkpens:"} addcls={"addInkpen"} remcls={"remInkpen"} totalcls={"totalInkpens"} settotal={setTotal} />
+     <Invent start={13} itemName={"Books:"} ClassADD={"addBook"} ClassRemove={"remBook"} ClassTotal={"totalBooks"} settotal={setTotal} />
+     <Invent initial={10} itemName={"Pens:"} ClassADD={"addPen"} ClassRemove={"remPen"} ClassTotal={"totalPens"} settotal={setTotal} />
+     <Invent initial={44} itemName={"Notebooks:"} ClassADD={"addNotebook"} ClassRemove={"remNotebook"} ClassTotal={"totalNotebooks"} settotal={setTotal} />
+     <Invent initial={78} itemName={"Inkpens:"} ClassADD={"addInkpen"} ClassRemove={"remInkpen"} ClassTotal={"totalInkpens"} settotal={setTotal} />
 
      <div className="total">{total}</div>
     </div>
